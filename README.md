@@ -4,7 +4,9 @@ This project is a C# port of my PowerSpray.ps1 script. SharpSpray a simple code 
 https://github.com/jnqpblc/Misc-PowerShell/blob/master/PowerSpray.ps1
 
 By default it will automatically generate the UserList from the domain.
+
 By default it will automatically generate the PasswordList using the current date.
+
 Be careful not to lockout any accounts.
 
 ```
