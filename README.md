@@ -11,7 +11,7 @@ Be careful not to lockout any accounts.
 SharpSpray.exe
       --Seeds [ A comma-separated list of passwords to as a seed to the internal list generator. Eg. Password,Welcome,Company ]
       --Passwords [ A comma-separated list of passwords to use instead of the internal list generator. Eg. Password1,Password19,Company19,Welcome19 ]
-      --Delay [The delay time between guesses in millisecounds. Eg. 300 ]
+      --Delay [ The delay time between guesses in millisecounds. Eg. 300 ]
       --Sleep [ The number of minutes to sleep between password cycles. Eg. 15 ]
 
 C:\Users\jnqpblc\Desktop>SharpSpray.exe --Sleep 15
