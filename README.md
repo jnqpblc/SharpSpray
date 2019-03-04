@@ -22,7 +22,7 @@ C:\Users\jnqpblc\Desktop>SharpSpray.exe --Sleep 15
 [*] The Min Password Length for the current domain is 10.
 [+] Successfully generated a list of 64 passwords.
 [*] Starting password spraying operations.
-[*] Using a delay of 1000 milliseonds between attempts.
+[*] Using the default delay of 1000 milliseonds between attempts.
 [*] Using password Winter19
 ^C
 
@@ -32,7 +32,7 @@ C:\Users\jnqpblc\Desktop>SharpSpray.exe --Seeds Password,Welcome,Company --Sleep
 [*] The Min Password Length for the current domain is 10.
 [+] Successfully generated a list of 42 passwords.
 [*] Starting password spraying operations.
-[*] Using a delay of 1000 milliseonds between attempts.
+[*] Using the default delay of 1000 milliseonds between attempts.
 [*] Using password Password19
 ^C
 
