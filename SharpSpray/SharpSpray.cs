@@ -49,7 +49,7 @@ namespace SharpSpray
 
             try
             {
-                DirectoryEntry dEntry = new DirectoryEntry("LDAP://" + System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.GetComputerSite().Servers[0]);
+                DirectoryEntry dEntry = new DirectoryEntry("LDAP://" + System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.GetComputerSite().InterSiteTopologyGenerator.Name);
                 DirectorySearcher dSearch = new DirectorySearcher(dEntry);
                 dSearch.Filter = "(&(objectCategory=Person)(sAMAccountName=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))";
                 dSearch.PageSize = 1000;
