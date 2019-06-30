@@ -1,5 +1,5 @@
 # SharpSpray
-This project is a C# port of my PowerSpray.ps1 script. SharpSpray a simple code set to perform a password spraying attack against all users of a domain using LDAP and is compatible with Cobaltstrike.
+This project is a C# port of my PowerSpray.ps1 script. SharpSpray a simple code set to perform a password spraying attack against all users of a domain using LDAP and is compatible with Cobalt Strike.
 
 https://github.com/jnqpblc/Misc-PowerShell/blob/master/PowerSpray.ps1
 
